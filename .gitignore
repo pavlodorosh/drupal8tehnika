@@ -7,6 +7,8 @@
 #/web/profiles/contrib/
 #/web/libraries/
 /web/sites/default/files/php/*
+/web/sites/default/files/css/*
+/web/sites/default/files/js/*
 
 # Ignore sensitive information
 /web/sites/*/settings.php
