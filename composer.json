@@ -25,6 +25,7 @@
         "drupal/advupdate": "^1.0",
         "drupal/better_exposed_filters": "^4.0@alpha",
         "drupal/bootstrap": "^3.20",
+        "drupal/bootstrap4": "^1.0@RC",
         "drupal/commerce": "^2.14",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.7.0",
