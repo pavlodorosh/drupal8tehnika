@@ -1,0 +1,7 @@
+name: d8
+type: theme
+description: "d8"
+core: 8.x
+libraries:
+  - d8/bootstrap
+  - d8/global-styling
