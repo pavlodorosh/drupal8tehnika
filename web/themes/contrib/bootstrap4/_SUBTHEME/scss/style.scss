@@ -1,10 +1,8 @@
+// Include bootstrap variables definitions overrides.
 @import 'overrides/variables';
-
-// Path to default bootstrap4 sass.
-// @import '../../../../../../../vendor/twbs/bootstrap/scss/bootstrap';
-
-// Path to default bootstrap4 theme sass.
-// @import '../../../../../../themes/custom/bootstrap4/scss/theme';
 
 // Include custom sub theme.
 @import 'custom/variables';
+
+// Include parent theme with all things Boostrap for full override
+@import "[DOCROOT]/themes/contrib/boostrap4/scss/style";
