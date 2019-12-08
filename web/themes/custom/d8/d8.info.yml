@@ -1,5 +1,6 @@
 name: d8
 type: theme
+base theme: bartik
 description: "d8"
 core: 8.x
 libraries:
