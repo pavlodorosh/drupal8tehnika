@@ -31,16 +31,12 @@ function token_help($route_name, RouteMatchInterface $route_match) {
       'show_nested' => FALSE,
     ]);
     $output = '<h3>' . t('About') . '</h3>';
-    $output .= '<p>' . t('The <a href=":project">Token</a> module provides a user interface for the site token system. It also adds some additional tokens that are used extensively during site development. Tokens are specially formatted chunks of text that serve as placeholders for a dynamically generated value. For more information, covering both the token system and the additional tools provided by the Token module, see the <a href=":online">online documentation</a>.', [
-        ':online' => 'https://www.drupal.org/documentation/modules/token',
-        ':project' => 'https://www.drupal.org/project/token',
-      ]) . '</p>';
+    $output .= '<p>' . t('The <a href=":project">Token</a> module provides a user interface for the site token system. It also adds some additional tokens that are used extensively during site development. Tokens are specially formatted chunks of text that serve as placeholders for a dynamically generated value. For more information, covering both the token system and the additional tools provided by the Token module, see the <a href=":online">online documentation</a>.', [':online' => 'https://www.drupal.org/documentation/modules/token', ':project' => 'https://www.drupal.org/project/token']) . '</p>';
     $output .= '<h3>' . t('Uses') . '</h3>';
     $output .= '<p>' . t('Your website uses a shared token system for exposing and using placeholder tokens and their appropriate replacement values. This allows for any module to provide placeholder tokens for strings without having to reinvent the wheel. It also ensures consistency in the syntax used for tokens, making the system as a whole easier for end users to use.') . '</p>';
     $output .= '<dl>';
     $output .= '<dt>' . t('The list of the currently available tokens on this site are shown below.') . '</dt>';
-    $output .= '<dd>' . \Drupal::service('renderer')
-        ->render($token_tree) . '</dd>';
+    $output .= '<dd>' . \Drupal::service('renderer')->render($token_tree) . '</dd>';
     $output .= '</dl>';
     return $output;
   }
@@ -85,8 +81,7 @@ function token_block_view_alter(&$build, BlockPluginInterface $block) {
       // @todo https://www.drupal.org/node/2580723 will add a method or option
       //   to the token API to do this, use that when available.
       $bubbleable_metadata = BubbleableMetadata::createFromRenderArray($build);
-      $build['#configuration']['label'] = PlainTextOutput::renderFromHtml(\Drupal::token()
-        ->replace($label, [], [], $bubbleable_metadata));
+      $build['#configuration']['label'] = PlainTextOutput::renderFromHtml(\Drupal::token()->replace($label, [], [], $bubbleable_metadata));
       $bubbleable_metadata->applyTo($build);
     }
   }
@@ -135,28 +130,28 @@ function token_field_info_alter(&$info) {
 }
 
 /**
- * Implements hook_date_format_insert().
+ * Implements hook_ENTITY_TYPE_insert().
  */
 function token_date_format_insert() {
   token_clear_cache();
 }
 
 /**
- * Implements hook_date_format_delete().
+ * Implements hook_ENTITY_TYPE_delete().
  */
 function token_date_format_delete() {
   token_clear_cache();
 }
 
 /**
- * Implements hook_field_storage_config_presave().
+ * Implements hook_ENTITY_TYPE_presave().
  */
 function token_field_config_presave($instance) {
   token_clear_cache();
 }
 
 /**
- * Implements hook_field_storage_config_delete().
+ * Implements hook_ENTITY_TYPE_delete().
  */
 function token_field_config_delete($instance) {
   token_clear_cache();
@@ -211,10 +206,6 @@ function token_entity_type_alter(array &$entity_types) {
 }
 
 /**
- * Implements hook_entity_view_modes_info().
- */
-
-/**
  * Implements hook_module_implements_alter().
  *
  * Adds missing token support for core modules.
@@ -224,8 +215,7 @@ function token_module_implements_alter(&$implementations, $hook) {
 
   if ($hook == 'tokens' || $hook == 'token_info' || $hook == 'token_info_alter' || $hook == 'tokens_alter') {
     foreach (_token_core_supported_modules() as $module) {
-      if (\Drupal::moduleHandler()
-          ->moduleExists($module) && function_exists($module . '_' . $hook)) {
+      if (\Drupal::moduleHandler()->moduleExists($module) && function_exists($module . '_' . $hook)) {
         $implementations[$module] = TRUE;
       }
     }
@@ -262,7 +252,6 @@ function _token_module($type, $name) {
  * parameter defined.
  *
  * For example:
- *
  * @code
  * $form['my_node_text_element'] = [
  *   '#type' => 'textfield',
@@ -289,27 +278,21 @@ function token_element_validate($element, FormStateInterface $form_state) {
 
   // Validate if an element must have a minimum number of tokens.
   if (isset($element['#min_tokens']) && count($tokens) < $element['#min_tokens']) {
-    $error = \Drupal::translation()
-      ->formatPlural($element['#min_tokens'], '%name must contain at least one token.', '%name must contain at least @count tokens.', ['%name' => $title]);
+    $error = \Drupal::translation()->formatPlural($element['#min_tokens'], '%name must contain at least one token.', '%name must contain at least @count tokens.', ['%name' => $title]);
     $form_state->setError($element, $error);
   }
 
   // Validate if an element must have a maximum number of tokens.
   if (isset($element['#max_tokens']) && count($tokens) > $element['#max_tokens']) {
-    $error = \Drupal::translation()
-      ->formatPlural($element['#max_tokens'], '%name must contain at most one token.', '%name must contain at most @count tokens.', ['%name' => $title]);
+    $error = \Drupal::translation()->formatPlural($element['#max_tokens'], '%name must contain at most one token.', '%name must contain at most @count tokens.', ['%name' => $title]);
     $form_state->setError($element, $error);
   }
 
   // Check if the field defines specific token types.
   if (isset($element['#token_types'])) {
-    $invalid_tokens = \Drupal::token()
-      ->getInvalidTokensByContext($tokens, $element['#token_types']);
+    $invalid_tokens = \Drupal::token()->getInvalidTokensByContext($tokens, $element['#token_types']);
     if ($invalid_tokens) {
-      $form_state->setError($element, t('%name is using the following invalid tokens: @invalid-tokens.', [
-        '%name' => $title,
-        '@invalid-tokens' => implode(', ', $invalid_tokens),
-      ]));
+      $form_state->setError($element, t('%name is using the following invalid tokens: @invalid-tokens.', ['%name' => $title, '@invalid-tokens' => implode(', ', $invalid_tokens)]));
     }
   }
 
@@ -441,7 +424,6 @@ function token_form_user_admin_settings_alter(&$form, FormStateInterface $form_s
  *
  * @param $name
  *   The token name to clean.
- *
  * @return
  *   The cleaned token name.
  */
@@ -449,13 +431,7 @@ function token_clean_token_name($name) {
   static $names = [];
 
   if (!isset($names[$name])) {
-    $cleaned_name = strtr($name, [
-      ' ' => '-',
-      '_' => '-',
-      '/' => '-',
-      '[' => '-',
-      ']' => '',
-    ]);
+    $cleaned_name = strtr($name, [' ' => '-', '_' => '-', '/' => '-', '[' => '-', ']' => '']);
     $cleaned_name = preg_replace('/[^\w\-]/i', '', $cleaned_name);
     $cleaned_name = trim($cleaned_name, '-');
     $names[$name] = $cleaned_name;
@@ -518,10 +494,7 @@ function token_render_cache_get($elements) {
  */
 function token_render_cache_set(&$markup, $elements) {
   // This should only run of drupal_render_cache_set() did not.
-  if (in_array(\Drupal::request()->server->get('REQUEST_METHOD'), [
-    'GET',
-    'HEAD',
-  ])) {
+  if (in_array(\Drupal::request()->server->get('REQUEST_METHOD'), ['GET', 'HEAD'])) {
     return FALSE;
   }
 
@@ -567,6 +540,9 @@ function token_menu_link_load_all_parents($plugin_id, $langcode) {
  * If the underlying entity is a content menu item, load it to get the
  * translated menu item title.
  *
+ * @todo Remove this when there is a better way to get a translated menu
+ *   item title in core: https://www.drupal.org/node/2795143
+ *
  * @param \Drupal\Core\Menu\MenuLinkInterface $menu_link
  *   The menu link.
  * @param string|null $langcode
@@ -574,19 +550,13 @@ function token_menu_link_load_all_parents($plugin_id, $langcode) {
  *
  * @return string
  *   The menu link title.
- * @todo Remove this when there is a better way to get a translated menu
- *   item title in core: https://www.drupal.org/node/2795143
- *
  */
 function token_menu_link_translated_title(MenuLinkInterface $menu_link, $langcode = NULL) {
   $metadata = $menu_link->getMetaData();
   if (isset($metadata['entity_id']) && $menu_link->getProvider() == 'menu_link_content') {
     /** @var \Drupal\menu_link_content\MenuLinkContentInterface $entity */
-    $entity = \Drupal::entityTypeManager()
-      ->getStorage('menu_link_content')
-      ->load($metadata['entity_id']);
-    $entity = \Drupal::service('entity.repository')
-      ->getTranslationFromContext($entity, $langcode);
+    $entity = \Drupal::entityTypeManager()->getStorage('menu_link_content')->load($metadata['entity_id']);
+    $entity = \Drupal::service('entity.repository')->getTranslationFromContext($entity, $langcode);
     return $entity->getTitle();
   }
   return $menu_link->getTitle();
@@ -619,8 +589,7 @@ function token_taxonomy_term_load_all_parents($tid, $langcode) {
     array_shift($parents);
     $parents = array_reverse($parents);
     foreach ($parents as $term) {
-      $translation = \Drupal::service('entity.repository')
-        ->getTranslationFromContext($term, $langcode);
+      $translation = \Drupal::service('entity.repository')->getTranslationFromContext($term, $langcode);
       $cache[$langcode][$tid][$term->id()] = $translation->label();
     }
   }
@@ -664,9 +633,8 @@ function token_element_children(&$elements, $sort = FALSE) {
  *
  * @param array $book
  *   The book data. The 'nid' key points to the current page of the book.
- *   The 'p1' ... 'p9' keys point to parents of the page, if they exist, with
- *   'p1' pointing to the book itself and the last defined pX to the current
- *   page.
+ *   The 'p1' ... 'p9' keys point to parents of the page, if they exist, with 'p1'
+ *   pointing to the book itself and the last defined pX to the current page.
  *
  * @return string[]
  *   List of node titles of the book parents.
@@ -699,14 +667,14 @@ function token_entity_base_field_info(EntityTypeInterface $entity_type) {
   // from the node add/edit form so that tokens generated at that time that
   // reference the menu link can access the yet to be saved menu link.
   // @todo Revisit when https://www.drupal.org/node/2315773 is resolved.
-  if ($entity_type->id() === 'node' && \Drupal::moduleHandler()
-      ->moduleExists('menu_ui')) {
+  if ($entity_type->id() === 'node' && \Drupal::moduleHandler()->moduleExists('menu_ui')) {
     $fields['menu_link'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Menu link'))
       ->setDescription(t('Computed menu link for the node (only available during node saving).'))
       ->setRevisionable(TRUE)
       ->setSetting('target_type', 'menu_link_content')
       ->setTranslatable(TRUE)
+      ->setInternal(TRUE)
       ->setDisplayOptions('view', [
         'label' => 'hidden',
         'region' => 'hidden',
@@ -764,8 +732,7 @@ function token_node_menu_link_submit($entity_type, NodeInterface $node, &$form, 
         // Node's active langcode, create a new translation.
         if ($entity->isTranslatable()) {
           if (!$entity->hasTranslation($node->language()->getId())) {
-            $entity = $entity->addTranslation($node->language()
-              ->getId(), $entity->toArray());
+            $entity = $entity->addTranslation($node->language()->getId(), $entity->toArray());
           }
           else {
             $entity = $entity->getTranslation($node->language()->getId());
@@ -795,6 +762,7 @@ function token_node_menu_link_submit($entity_type, NodeInterface $node, &$form, 
       $entity->menu_name->value = $values['menu_name'];
       $entity->parent->value = $values['parent'];
       $entity->weight->value = isset($values['weight']) ? $values['weight'] : 0;
+      $entity->isDefaultRevision($node->isDefaultRevision());
       $entity->save();
       $node->menu_link = $entity;
       // Leave this for _menu_ui_node_save() to pick up so we don't end up with
@@ -821,5 +789,3 @@ function token_node_insert(NodeInterface $node) {
 function token_menu_link_content_presave(MenuLinkContentInterface $menu_link_content) {
   drupal_static_reset('token_menu_link_load_all_parents');
 }
-
-

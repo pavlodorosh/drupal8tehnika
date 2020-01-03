@@ -95,11 +95,9 @@
         </div>
     </div>
     <div class="hederl1">
-        <div class="phone">
-            +38044 363 20 33 <br>
-            +38067 406 55 55 <br>
-            +38095 406 55 55
-        </div>
+
+        {{ drupal_entity('block_content', 7) }}
+
         <div>
             <section id="block-block-1" class="block block-block clearfix">
 
@@ -108,41 +106,14 @@
                     <a href="http://simpl.com.ua/  ">Главная </a>
                 </nav>
                 <div class="mnav">
-                    <nav class="mnav_i">
-                        <a class="all-nav " href="#">меню <span><i></i><i></i><i></i></span></a>
-                        <ul class="mn  ">
-                            <li><a href="http://simpl.com.ua/kitchens">Кухни</a></li>
-                            <li><a target="_blank" href="http://simpl.com.ua/3d-tur">3D-тур</a></li>
-                            <li><a target="_blank" href="http://simpl.com.ua/production">Производство</a></li>
-                            <li><a target="_blank" href="http://simpl.com.ua/constructor">ОНЛАЙН-КОНСТРУКТОР</a></li>
-                            <li><a target="_blank" href="http://simpl.com.ua/online-calculate">Онлайн-расчет</a></li>
-                            <li><a href="/uk">UKR</a></li>
 
-
-                        </ul>
-                    </nav>
-
+                    {{ drupal_menu('mainmenuru') }}
 
                     <nav class=" morenav clearfix">
                         <div class="close"></div>
-                        <ul>
-                            <li><a href="http://simpl.com.ua/">Главная</a></li>
-                            <li><a href="http://simpl.com.ua/production">Производство</a></li>
-                            <li><a target="_blank" href="http://simpl.com.ua/3d-tur">3D-тур</a></li>
-                            <li><a target="_blank" href="http://simpl.com.ua/how-to-buy">Как купить</a></li>
-                            <li><a target="_blank" href="http://simpl.com.ua/benefits">Преимущества кухонь</a></li>
-                            <li><a target="_blank" href="http://simpl.com.ua/constructor">ОНЛАЙН-КОНСТРУКТОР</a></li>
-                            <li><a target="_blank" href="http://simpl.com.ua/online-calculate">Онлайн-расчет</a></li>
-                            <li><a target="_blank" href="http://simpl.com.ua/articles">Полезные статьи</a></li>
-                            <li><a target="_blank" href="http://simpl.com.ua/service-and-delivery">Сервис и доставка</a>
-                            </li>
-                            <li><a target="_blank" href="http://simpl.com.ua/faq">Вопрос-ответ</a></li>
-                            <li><a target="_blank" href="http://simpl.com.ua/garantii">ГАРАНТИИ</a></li>
-                            <li><a target="_blank" href="http://simpl.com.ua/instruction">Инструкции</a></li>
-                            <li><a target="_blank" href="http://simpl.com.ua/contact">Контакты</a></li>
-                            <li><a target="_blank" href="http://simpl.com.ua/kitchens">Кухни</a></li>
 
-                        </ul>
+                        {{ drupal_menu('mainmenurightru') }}
+
                     </nav>
 
                     <div class="head_basket">
