@@ -12257,12 +12257,7 @@ a.ui-button.ui-widget.ui-spinner-button.ui-spinner-down.ui-corner-br.ui-button-i
         margin-left: 0px;
     }
 
-
 }
-
-
-
-
 
 #modalContainer {
     background-color: rgba(0, 0, 0, 0.3);
@@ -12387,8 +12382,6 @@ code span {
     width: 610px !important;
     border: 1px #1d323a solid;
     border-radius: 0px;
-
-
 }
 
 .ui-widget-header {
@@ -12439,7 +12432,6 @@ code span {
 }
 
 .back-fon {
-
     background-color: rgba(0, 0, 0, .3);
     height: 100%;
     position: fixed;
@@ -12448,7 +12440,6 @@ code span {
     left: 0;
     display: none;
     z-index: -9999999;
-
 }
 
 .ui-dialog .ui-dialog-content {
@@ -12533,8 +12524,6 @@ code span {
         color: #1d323a;
         background: #fff;
         box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
-
-
     }
 
     .page-povrejdenny .region-content .views-row .views-field-field-rrab,
@@ -12567,8 +12556,6 @@ code span {
     .page-omikrovolnovki .region-content .views-row .views-field-field-rrab,
     .page-aksessuary .region-content .views-row .views-field-field-rrab {
         display: none;
-
-
     }
 
     .page-povrejdenny .region-content .views-row:hover>.views-field-field-rrab,
@@ -12606,7 +12593,6 @@ code span {
         color: #1d323a;
         background: #fff;
         box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
-
     }
 
     .page-povrejdenny .region-content .views-row .views-field-field-kkomp,
