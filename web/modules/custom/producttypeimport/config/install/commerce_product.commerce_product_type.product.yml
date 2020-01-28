@@ -1,0 +1,11 @@
+langcode: ru
+status: true
+dependencies: {  }
+id: product
+label: Product
+description: ''
+variationType: product
+multipleVariations: false
+injectVariationFields: true
+traits: {  }
+locked: false

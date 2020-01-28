@@ -1,0 +1,7 @@
+langcode: ru
+status: true
+dependencies: {  }
+name: ottenok
+vid: ottenok
+description: null
+weight: 0

@@ -1,0 +1,18 @@
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.product
+    - field.storage.commerce_product.field_brick
+id: commerce_product.product.field_brick
+field_name: field_brick
+entity_type: commerce_product
+bundle: product
+label: Камень
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,9 @@
+langcode: ru
+status: true
+dependencies: {  }
+id: product
+label: Product
+orderItemType: default
+generateTitle: false
+traits: {  }
+locked: false

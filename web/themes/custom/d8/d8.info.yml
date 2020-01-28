@@ -17,3 +17,6 @@ regions:
   sidebar_second: "Sidebar second"
   footer: "Footer"
   footer_main: "Footer main"
+  shopping_cart: "Shopping cart"
+  filter: "Filter product"
+  product: "Product content"

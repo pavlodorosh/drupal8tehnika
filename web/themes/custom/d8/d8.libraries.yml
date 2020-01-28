@@ -5,6 +5,7 @@ bootstrap:
       css/bootstrap.min.css: { minified: true }
   js:
     js/bootstrap.min.js: { minified: true }
+    js/jquery-migrate-3.1.0.min.js: { minified: true }
   dependencies:
     - core/jquery
     - core/drupal
@@ -15,6 +16,12 @@ bootstrap:
 global-styling:
   css:
     theme:
+      css/font.css: {}
       css/style.css: {}
+      css/header.css: {}
+      css/product.css: {}
+      css/filter.css: {}
+      css/footer.css: {}
+
   js:
     js/main.js: {}

@@ -1,0 +1,1095 @@
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.product
+    - field.field.commerce_product.product.field__3_
+    - field.field.commerce_product.product.field__no_frost
+    - field.field.commerce_product.product.field_actionmodal
+    - field.field.commerce_product.product.field_aquastop
+    - field.field.commerce_product.product.field_art_p
+    - field.field.commerce_product.product.field_avtopodpd
+    - field.field.commerce_product.product.field_avtopodpk
+    - field.field.commerce_product.product.field_bmoi
+    - field.field.commerce_product.product.field_brends
+    - field.field.commerce_product.product.field_brick
+    - field.field.commerce_product.product.field_calc_group
+    - field.field.commerce_product.product.field_capucinator
+    - field.field.commerce_product.product.field_category
+    - field.field.commerce_product.product.field_ch
+    - field.field.commerce_product.product.field_ch_t
+    - field.field.commerce_product.product.field_character_dmg
+    - field.field.commerce_product.product.field_color
+    - field.field.commerce_product.product.field_comp
+    - field.field.commerce_product.product.field_ddat
+    - field.field.commerce_product.product.field_design
+    - field.field.commerce_product.product.field_do
+    - field.field.commerce_product.product.field_doc
+    - field.field.commerce_product.product.field_dupt
+    - field.field.commerce_product.product.field_elite
+    - field.field.commerce_product.product.field_emir
+    - field.field.commerce_product.product.field_emir_salon
+    - field.field.commerce_product.product.field_exclusive
+    - field.field.commerce_product.product.field_forma
+    - field.field.commerce_product.product.field_fun
+    - field.field.commerce_product.product.field_gar
+    - field.field.commerce_product.product.field_gazk
+    - field.field.commerce_product.product.field_gd
+    - field.field.commerce_product.product.field_gril
+    - field.field.commerce_product.product.field_image
+    - field.field.commerce_product.product.field_kbottles
+    - field.field.commerce_product.product.field_kch
+    - field.field.commerce_product.product.field_kdver
+    - field.field.commerce_product.product.field_kenergy
+    - field.field.commerce_product.product.field_kkomf
+    - field.field.commerce_product.product.field_kkomp
+    - field.field.commerce_product.product.field_kkomppp
+    - field.field.commerce_product.product.field_kkrujki
+    - field.field.commerce_product.product.field_kprog
+    - field.field.commerce_product.product.field_ksveg
+    - field.field.commerce_product.product.field_ky
+    - field.field.commerce_product.product.field_material
+    - field.field.commerce_product.product.field_md
+    - field.field.commerce_product.product.field_mfasad
+    - field.field.commerce_product.product.field_mg
+    - field.field.commerce_product.product.field_mmicr
+    - field.field.commerce_product.product.field_new_link
+    - field.field.commerce_product.product.field_novelty
+    - field.field.commerce_product.product.field_obholod
+    - field.field.commerce_product.product.field_obmoroz
+    - field.field.commerce_product.product.field_okdkg
+    - field.field.commerce_product.product.field_okdvl
+    - field.field.commerce_product.product.field_op
+    - field.field.commerce_product.product.field_os
+    - field.field.commerce_product.product.field_ottenok
+    - field.field.commerce_product.product.field_pnk
+    - field.field.commerce_product.product.field_price
+    - field.field.commerce_product.product.field_priceaction
+    - field.field.commerce_product.product.field_priceold
+    - field.field.commerce_product.product.field_pvl
+    - field.field.commerce_product.product.field_pzagr
+    - field.field.commerce_product.product.field_rdush
+    - field.field.commerce_product.product.field_remain
+    - field.field.commerce_product.product.field_revers
+    - field.field.commerce_product.product.field_rrab
+    - field.field.commerce_product.product.field_rrrrupr
+    - field.field.commerce_product.product.field_rshir
+    - field.field.commerce_product.product.field_rvis
+    - field.field.commerce_product.product.field_salesarr
+    - field.field.commerce_product.product.field_si
+    - field.field.commerce_product.product.field_snishi
+    - field.field.commerce_product.product.field_so
+    - field.field.commerce_product.product.field_sod
+    - field.field.commerce_product.product.field_supperp
+    - field.field.commerce_product.product.field_tempdat
+    - field.field.commerce_product.product.field_timer
+    - field.field.commerce_product.product.field_tippov
+    - field.field.commerce_product.product.field_tk
+    - field.field.commerce_product.product.field_tnapr
+    - field.field.commerce_product.product.field_toc
+    - field.field.commerce_product.product.field_top
+    - field.field.commerce_product.product.field_tosv
+    - field.field.commerce_product.product.field_tresh
+    - field.field.commerce_product.product.field_ts
+    - field.field.commerce_product.product.field_tt
+    - field.field.commerce_product.product.field_tupr
+    - field.field.commerce_product.product.field_type_product
+    - field.field.commerce_product.product.field_type_surf
+    - field.field.commerce_product.product.field_typenom
+    - field.field.commerce_product.product.field_ug
+    - field.field.commerce_product.product.field_upr
+    - field.field.commerce_product.product.field_ursh
+    - field.field.commerce_product.product.field_usi
+    - field.field.commerce_product.product.field_vidm
+    - field.field.commerce_product.product.field_vmat
+    - field.field.commerce_product.product.field_vshlang
+    - field.field.commerce_product.product.field_vvv
+    - field.field.commerce_product.product.field_zagrsush
+    - field.field.commerce_product.product.field_zk
+    - field.field.commerce_product.product.field_zpos
+    - field.field.commerce_product.product.field_zsk
+    - image.style.thumbnail
+  module:
+    - commerce
+    - commerce_product
+    - field_group
+    - path
+    - svg_image
+    - tablefield
+    - text
+third_party_settings:
+  field_group:
+    group_action:
+      children:
+        - field_priceold
+        - field_priceaction
+        - field_actionmodal
+        - field_salesarr
+        - field_calc_group
+        - field_type_product
+        - field_new_link
+      parent_name: ''
+      weight: 8
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Акции
+    group_obs:
+      children:
+        - field_price
+        - field_category
+        - field_color
+        - field_brends
+        - field_remain
+        - field_character_dmg
+        - field_upr
+        - field_art_p
+        - field_tt
+      parent_name: ''
+      weight: 5
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+        direction: vertical
+      label: Общее
+    group_char:
+      children:
+        - field_mfasad
+        - field_timer
+        - field_type_surf
+        - field_os
+        - field_do
+        - field_gar
+        - field_ch
+        - field_fun
+        - field_op
+        - field_doc
+        - field_vidm
+        - field_vmat
+        - field_forma
+        - field_snishi
+        - field_kkomp
+        - field__3_
+        - field_rrab
+        - field_ursh
+        - field_tupr
+        - field_tosv
+        - field_ug
+        - field_dupt
+        - field_ddat
+        - field_material
+        - field_ottenok
+        - field_design
+        - field_vshlang
+        - field_rdush
+        - field_ts
+        - field_kprog
+        - field_toc
+        - field_vvv
+        - field_obmoroz
+        - field_obholod
+        - field_comp
+        - field_mmicr
+        - field_rshir
+        - field_rvis
+        - field_tnapr
+        - field_gril
+        - field_zpos
+        - field_pzagr
+        - field_aquastop
+        - field_tippov
+        - field_rrrrupr
+        - field_gazk
+        - field_tresh
+        - field_bmoi
+        - field_kkrujki
+        - field_kkomppp
+        - field_kdver
+        - field__no_frost
+        - field_ksveg
+        - field_kenergy
+        - field_tempdat
+        - field_kbottles
+        - field_zagrsush
+        - field_kkomf
+        - field_avtopodpd
+        - field_avtopodpk
+        - field_typenom
+        - field_brick
+        - field_kch
+        - field_exclusive
+        - field_capucinator
+        - field_okdvl
+        - field_okdkg
+        - field_mg
+        - field_pvl
+        - field_so
+        - field_zk
+        - field_zsk
+        - field_md
+        - field_pnk
+        - field_revers
+        - field_si
+        - field_sod
+        - field_tk
+        - field_gd
+        - field_ky
+        - field_usi
+      parent_name: ''
+      weight: 6
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Характеристики
+    group_metka:
+      children:
+        - field_emir_salon
+        - field_emir
+        - field_elite
+        - field_novelty
+        - field_supperp
+        - field_top
+      parent_name: ''
+      weight: 7
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Метка
+id: commerce_product.product.default
+targetEntityType: commerce_product
+bundle: product
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field__3_:
+    weight: 22
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field__no_frost:
+    weight: 58
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_actionmodal:
+    weight: 102
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_aquastop:
+    weight: 49
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_art_p:
+    weight: 123
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_avtopodpd:
+    weight: 65
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_avtopodpk:
+    weight: 66
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_bmoi:
+    weight: 54
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_brends:
+    weight: 119
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_brick:
+    weight: 68
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_calc_group:
+    weight: 104
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_capucinator:
+    weight: 74
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_category:
+    weight: 117
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ch:
+    weight: 13
+    settings:
+      input_type: textfield
+    third_party_settings: {  }
+    type: tablefield
+    region: content
+  field_ch_t:
+    weight: 4
+    settings:
+      input_type: textfield
+    third_party_settings: {  }
+    type: tablefield
+    region: content
+  field_character_dmg:
+    weight: 121
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_color:
+    weight: 118
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_comp:
+    weight: 41
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_ddat:
+    weight: 29
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_design:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_do:
+    weight: 11
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_doc:
+    weight: 16
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_dupt:
+    weight: 28
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_elite:
+    weight: 95
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_emir:
+    weight: 94
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_emir_salon:
+    weight: 93
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_exclusive:
+    weight: 70
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_forma:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_fun:
+    weight: 14
+    settings:
+      input_type: textfield
+    third_party_settings: {  }
+    type: tablefield
+    region: content
+  field_gar:
+    weight: 12
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_gazk:
+    weight: 52
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_gd:
+    weight: 88
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_gril:
+    weight: 46
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_kbottles:
+    weight: 62
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_kch:
+    weight: 69
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_kdver:
+    weight: 57
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_kenergy:
+    weight: 60
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_kkomf:
+    weight: 64
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_kkomp:
+    weight: 21
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_kkomppp:
+    weight: 56
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_kkrujki:
+    weight: 55
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_kprog:
+    weight: 36
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_ksveg:
+    weight: 59
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_ky:
+    weight: 89
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_material:
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_md:
+    weight: 82
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mfasad:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_mg:
+    weight: 77
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_mmicr:
+    weight: 42
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_new_link:
+    weight: 106
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_novelty:
+    weight: 96
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_obholod:
+    weight: 40
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_obmoroz:
+    weight: 39
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_okdkg:
+    weight: 76
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_okdvl:
+    weight: 75
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_op:
+    weight: 15
+    settings:
+      input_type: textfield
+    third_party_settings: {  }
+    type: tablefield
+    region: content
+  field_os:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_ottenok:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_pnk:
+    weight: 83
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_price:
+    weight: 116
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_priceaction:
+    weight: 101
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_priceold:
+    weight: 100
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_pvl:
+    weight: 78
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_pzagr:
+    weight: 48
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_rdush:
+    weight: 34
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_remain:
+    weight: 120
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_revers:
+    weight: 84
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_rrab:
+    weight: 23
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_rrrrupr:
+    weight: 51
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_rshir:
+    weight: 43
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_rvis:
+    weight: 44
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_salesarr:
+    weight: 103
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_si:
+    weight: 85
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_snishi:
+    weight: 20
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_so:
+    weight: 79
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sod:
+    weight: 86
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_supperp:
+    weight: 97
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tempdat:
+    weight: 61
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_timer:
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tippov:
+    weight: 50
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tk:
+    weight: 87
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tnapr:
+    weight: 45
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_toc:
+    weight: 37
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_top:
+    weight: 98
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tosv:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tresh:
+    weight: 53
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_ts:
+    weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_tt:
+    weight: 124
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tupr:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_type_product:
+    weight: 105
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_type_surf:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_typenom:
+    weight: 67
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ug:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_upr:
+    weight: 122
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_ursh:
+    weight: 24
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_usi:
+    weight: 90
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_vidm:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_vmat:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_vshlang:
+    weight: 33
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_vvv:
+    weight: 38
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_zagrsush:
+    weight: 63
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_zk:
+    weight: 80
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_zpos:
+    weight: 47
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_zsk:
+    weight: 81
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 9
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 13
+    region: content
+    third_party_settings: {  }
+  stores:
+    type: commerce_entity_select
+    weight: 0
+    region: content
+    settings:
+      hide_single_entity: true
+      autocomplete_threshold: 7
+      autocomplete_size: 60
+      autocomplete_placeholder: ''
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: options_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  variations:
+    type: commerce_product_single_variation
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

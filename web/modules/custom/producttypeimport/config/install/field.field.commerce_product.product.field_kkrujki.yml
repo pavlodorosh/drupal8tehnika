@@ -1,0 +1,22 @@
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.product
+    - field.storage.commerce_product.field_kkrujki
+id: commerce_product.product.field_kkrujki
+field_name: field_kkrujki
+entity_type: commerce_product
+bundle: product
+label: 'Количество чаш'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

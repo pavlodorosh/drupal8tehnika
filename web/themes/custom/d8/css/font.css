@@ -1,0 +1,50 @@
+/*******font*********/
+@font-face {
+    font-family: 'uni_sansthin_caps';
+    src: url("../font/uni_sans_thin-webfont.eot");
+    src: url("../font/uni_sans_thin-webfont.eot?#iefix") format("embedded-opentype"), url("../font/uni_sans_thin-webfont.woff") format("woff"), url("../font/uni_sans_thin-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'plumbcbold';
+    src: url("../font/plumbc-b-webfont.eot");
+    src: url("../font/plumbc-b-webfont.eot?#iefix") format("embedded-opentype"), url("../font/plumbc-b-webfont.woff") format("woff"), url("../font/plumbc-b-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'uni_sansheavy_caps';
+    src: url("../font/uni_sans_heavy-webfont.eot");
+    src: url("../font/uni_sans_heavy-webfont.eot?#iefix") format("embedded-opentype"), url("../font/uni_sans_heavy-webfont.woff") format("woff"), url("../font/uni_sans_heavy-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'uni_sansheavy_italic_caps';
+    src: url("../font/uni_sans_heavy_italic-webfont.eot");
+    src: url("../font/uni_sans_heavy_italic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/uni_sans_heavy_italic-webfont.woff") format("woff"), url("../font/uni_sans_heavy_italic-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'plumbcregular';
+    src: url("../font/plumbc__-webfont.eot");
+    src: url("../font/plumbc__-webfont.eot?#iefix") format("embedded-opentype"), url("../font/plumbc__-webfont.woff") format("woff"), url("../font/plumbc__-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'uni_sansthin_italic_caps';
+    src: url("../font/uni_sans_thin_italic-webfont.eot");
+    src: url("../font/uni_sans_thin_italic-webfont.eot?#iefix") format("embedded-opentype"), url("../font/uni_sans_thin_italic-webfont.woff") format("woff"), url("../font/uni_sans_thin_italic-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*******font*********/

@@ -22,6 +22,7 @@ class RadioButtons extends FilterWidgetBase {
     return parent::defaultConfiguration() + [
       'select_all_none' => FALSE,
       'select_all_none_nested' => FALSE,
+      'display_inline' => FALSE,
     ];
   }
 
@@ -52,6 +53,14 @@ class RadioButtons extends FilterWidgetBase {
       ),
     ];
 
+    $form['display_inline'] = [
+      '#type' => 'checkbox',
+      '#title' => $this->t('Display inline'),
+      '#default_value' => !empty($this->configuration['display_inline']),
+      '#description' => $this->t('Display checkbox/radio options inline.'
+      ),
+    ];
+
     return $form;
   }
 
@@ -63,7 +72,7 @@ class RadioButtons extends FilterWidgetBase {
     $filter = $this->handler;
     // Form element is designated by the element ID which is user-
     // configurable.
-    $field_id = $filter->options['expose']['identifier'];
+    $field_id = $filter->options['is_grouped'] ? $filter->options['group_info']['identifier'] : $filter->options['expose']['identifier'];
 
     parent::exposedFormAlter($form, $form_state);
 
@@ -78,6 +87,9 @@ class RadioButtons extends FilterWidgetBase {
       if (!empty($filter->options['hierarchy'])) {
         $form[$field_id]['#bef_nested'] = TRUE;
       }
+
+      // Display inline.
+      $form[$field_id]['#bef_display_inline'] = $this->configuration['display_inline'];
 
       // Render as checkboxes if filter allows multiple selections.
       if (!empty($form[$field_id]['#multiple'])) {

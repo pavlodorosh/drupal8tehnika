@@ -93,6 +93,7 @@ class BetterExposedFilters extends InputRequired {
       'general' => [
         'autosubmit' => FALSE,
         'autosubmit_exclude_textfield' => FALSE,
+        'autosubmit_textfield_delay' => 500,
         'autosubmit_hide' => FALSE,
         'input_required' => FALSE,
         'allow_secondary' => FALSE,
@@ -187,7 +188,7 @@ class BetterExposedFilters extends InputRequired {
 
     // User raw user input for AJAX callbacks.
     $user_input = $form_state->getUserInput();
-    $bef_input = $user_input['exposed_form_options']['bef'];
+    $bef_input = $user_input['exposed_form_options']['bef'] ?? NULL;
 
     /*
      * General BEF settings
@@ -213,6 +214,20 @@ class BetterExposedFilters extends InputRequired {
       '#states' => [
         'visible' => [
           ':input[name="exposed_form_options[bef][general][autosubmit]"]' => ['checked' => TRUE],
+        ],
+      ],
+    ];
+
+    $form['bef']['general']['autosubmit_textfield_delay'] = [
+      '#type' => 'number',
+      '#title' => $this->t('Delay for textfield autosubmit'),
+      '#description' => $this->t('Configure a delay in ms before triggering autosubmit on textfields.'),
+      '#default_value' => $bef_options['general']['autosubmit_textfield_delay'],
+      '#min' => 0,
+      '#states' => [
+        'visible' => [
+          ':input[name="exposed_form_options[bef][general][autosubmit]"]' => ['checked' => TRUE],
+          ':input[name="exposed_form_options[bef][general][autosubmit_exclude_textfield]"]' => ['checked' => FALSE],
         ],
       ],
     ];
@@ -544,7 +559,7 @@ class BetterExposedFilters extends InputRequired {
       // Validate exposed filter configuration.
       if ($type === 'filter') {
         foreach ($config as $filter_id => $filter_options) {
-          $plugin_id = $filter_options['configuration']['plugin_id'];
+          $plugin_id = $filter_options['configuration']['plugin_id'] ?? NULL;
           if (!$plugin_id) {
             continue;
           }
@@ -559,7 +574,7 @@ class BetterExposedFilters extends InputRequired {
       }
       // Validate exposed pager/sort configuration.
       elseif (in_array($type, ['pager', 'sort'])) {
-        $plugin_id = $config['configuration']['plugin_id'];
+        $plugin_id = $config['configuration']['plugin_id'] ?? NULL;
         if (!$plugin_id) {
           continue;
         }
@@ -610,7 +625,7 @@ class BetterExposedFilters extends InputRequired {
       // Save exposed filter configuration.
       if ($type === 'filter') {
         foreach ($config as $filter_id => $filter_options) {
-          $plugin_id = $filter_options['configuration']['plugin_id'];
+          $plugin_id = $filter_options['configuration']['plugin_id'] ?? NULL;
           /** @var \Drupal\better_exposed_filters\Plugin\BetterExposedFiltersWidgetInterface $plugin */
           if (!$plugin_id) {
             unset($bef_options['filter'][$filter_id]);
@@ -630,7 +645,7 @@ class BetterExposedFilters extends InputRequired {
       }
       // Save exposed pager/sort configuration.
       elseif (in_array($type, ['pager', 'sort'])) {
-        $plugin_id = $config['configuration']['plugin_id'];
+        $plugin_id = $config['configuration']['plugin_id'] ?? NULL;
         if (!$plugin_id) {
           unset($bef_options[$type]);
           continue;
@@ -677,17 +692,22 @@ class BetterExposedFilters extends InputRequired {
 
     // Apply auto-submit values.
     if (!empty($bef_options['general']['autosubmit'])) {
-      $form = array_merge_recursive($form, ['#attributes' => [
-        'data-bef-auto-submit-full-form' => '',
-        'data-bef-auto-submit' => '',
-      ]]);
+      $form = array_merge_recursive($form, [
+        '#attributes' => [
+          'data-bef-auto-submit-full-form' => '',
+          'data-bef-auto-submit' => '',
+          'data-bef-auto-submit-delay' => $bef_options['general']['autosubmit_textfield_delay']
+        ],
+      ]);
       $form['actions']['submit']['#attributes']['data-bef-auto-submit-click'] = '';
       $form['#attached']['library'][] = 'better_exposed_filters/auto_submit';
 
       if (!empty($bef_options['general']['autosubmit_exclude_textfield'])) {
+        $supported_types = ['entity_autocomplete', 'textfield'];
         foreach ($form as &$element) {
-          if (isset($element['#type']) && $element['#type'] == 'textfield') {
-            $element['#attributes'] = ['data-bef-auto-submit-exclude' => ''];
+          $element_type = $element['#type'] ?? NULL;
+          if (in_array($element_type, $supported_types)) {
+            $element['#attributes']['data-bef-auto-submit-exclude'] = '';
           }
         }
       }
@@ -750,19 +770,21 @@ class BetterExposedFilters extends InputRequired {
     $filters = $this->view->display_handler->handlers['filter'];
 
     // Iterate over all exposed filters.
-    foreach ($bef_options['filter'] as $filter_id => $filter_options) {
-      // Sanity check: Ensure this filter is an exposed filter.
-      if (empty($filters[$filter_id]) || !$filters[$filter_id]->isExposed()) {
-        continue;
-      }
+    if (!empty($bef_options['filter'])) {
+      foreach ($bef_options['filter'] as $filter_id => $filter_options) {
+        // Sanity check: Ensure this filter is an exposed filter.
+        if (empty($filters[$filter_id]) || !$filters[$filter_id]->isExposed()) {
+            continue;
+        }
 
-      $plugin_id = $filter_options['plugin_id'];
-      if ($plugin_id) {
-        /** @var \Drupal\better_exposed_filters\Plugin\BetterExposedFiltersWidgetInterface $plugin */
-        $plugin = $this->filterWidgetManager->createInstance($plugin_id, $filter_options);
-        $plugin->setView($this->view);
-        $plugin->setViewsHandler($filters[$filter_id]);
-        $plugin->exposedFormAlter($form, $form_state);
+        $plugin_id = $filter_options['plugin_id'];
+        if ($plugin_id) {
+            /** @var \Drupal\better_exposed_filters\Plugin\BetterExposedFiltersWidgetInterface $plugin */
+            $plugin = $this->filterWidgetManager->createInstance($plugin_id, $filter_options);
+            $plugin->setView($this->view);
+            $plugin->setViewsHandler($filters[$filter_id]);
+            $plugin->exposedFormAlter($form, $form_state);
+        }
       }
     }
 

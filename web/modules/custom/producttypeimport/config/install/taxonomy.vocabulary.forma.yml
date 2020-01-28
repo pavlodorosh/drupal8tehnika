@@ -1,0 +1,7 @@
+langcode: ru
+status: true
+dependencies: {  }
+name: forma
+vid: forma
+description: null
+weight: 0

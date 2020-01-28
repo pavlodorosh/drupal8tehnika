@@ -1,0 +1,18 @@
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.product
+    - field.storage.commerce_product.field_top
+id: commerce_product.product.field_top
+field_name: field_top
+entity_type: commerce_product
+bundle: product
+label: 'Топ продаж'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

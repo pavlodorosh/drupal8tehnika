@@ -163,11 +163,7 @@ class Sliders extends FilterWidgetBase {
    * {@inheritdoc}
    */
   public function exposedFormAlter(array &$form, FormStateInterface $form_state) {
-    /** @var \Drupal\views\Plugin\views\filter\FilterPluginBase $filter */
-    $filter = $this->handler;
-    // Form element is designated by the element ID which is user-
-    // configurable.
-    $field_id = $filter->options['expose']['identifier'];
+    $field_id = $this->getExposedFilterFieldId();
 
     parent::exposedFormAlter($form, $form_state);
 
@@ -180,8 +176,7 @@ class Sliders extends FilterWidgetBase {
       'min' => $this->configuration['min'],
       'max' => $this->configuration['max'],
       'step' => $this->configuration['step'],
-      'animate' => ($this->configuration['animate'] === self::ANIMATE_CUSTOM) ?
-        $this->configuration['animate_ms'] : $this->configuration['animate'],
+      'animate' => ($this->configuration['animate'] === self::ANIMATE_CUSTOM) ? $this->configuration['animate_ms'] : $this->configuration['animate'],
       'orientation' => $this->configuration['orientation'],
       'id' => Html::getUniqueId($field_id),
       'dataSelector' => Html::getId($field_id),

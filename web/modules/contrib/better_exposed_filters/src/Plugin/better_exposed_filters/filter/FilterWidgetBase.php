@@ -160,8 +160,7 @@ abstract class FilterWidgetBase extends BetterExposedFiltersWidgetBase implement
     /** @var \Drupal\views\Plugin\views\filter\FilterPluginBase $filter */
     $filter = $this->handler;
     $filter_id = $filter->options['expose']['identifier'];
-    // Form element is designated by the element ID which is user-configurable.
-    $field_id = $filter->options['expose']['identifier'];
+    $field_id = $this->getExposedFilterFieldId();
     $is_collapsible = $this->configuration['advanced']['collapsible'];
     $is_secondary = !empty($form['secondary']) && $this->configuration['advanced']['is_secondary'];
 
@@ -284,6 +283,25 @@ abstract class FilterWidgetBase extends BetterExposedFiltersWidgetBase implement
   }
 
   /**
+   * Helper function to get the unique identifier for the exposed filter.
+   *
+   * Takes into account grouped filters with custom identifiers.
+   */
+  protected function getExposedFilterFieldId() {
+    /** @var \Drupal\views\Plugin\views\filter\FilterPluginBase $filter */
+    $filter = $this->handler;
+    $field_id = $filter->options['expose']['identifier'];
+    $is_grouped_filter = $filter->options['is_grouped'] ?: FALSE;
+
+    // Grouped filters store their identifier elsewhere.
+    if ($is_grouped_filter) {
+      $field_id = $filter->options['group_info']['identifier'];
+    }
+
+    return $field_id;
+  }
+
+  /**
    * Helper function to get the widget type of the exposed filter.
    *
    * @return string
@@ -294,6 +312,7 @@ abstract class FilterWidgetBase extends BetterExposedFiltersWidgetBase implement
     // form type of the filter.
     $form = [];
     $form_state = new FormState();
+    $form_state->set('exposed', TRUE);
     /** @var \Drupal\views\Plugin\views\filter\FilterPluginBase $filter */
     $filter = $this->handler;
     $filter_id = $filter->options['expose']['identifier'];

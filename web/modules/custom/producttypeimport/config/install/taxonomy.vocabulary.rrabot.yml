@@ -1,0 +1,7 @@
+langcode: ru
+status: true
+dependencies: {  }
+name: rrabot
+vid: rrabot
+description: null
+weight: 0

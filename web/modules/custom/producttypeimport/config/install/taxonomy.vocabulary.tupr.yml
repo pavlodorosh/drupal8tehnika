@@ -1,0 +1,7 @@
+langcode: ru
+status: true
+dependencies: {  }
+name: tupr
+vid: tupr
+description: null
+weight: 0

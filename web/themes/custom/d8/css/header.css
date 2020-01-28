@@ -1,0 +1,117 @@
+.header_main .hederl1 {
+  position: relative;
+  display: block;
+  float: right;
+  width: 100%;
+}
+
+.header_main .hederl1 .phone {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 218px;
+  text-align: center;
+  line-height: 42px;
+  background: #ee582f;
+  color: #fff;
+  font-size: 18px;
+  font-family: "plumbcbold", sans-serif;
+  z-index: 1;
+}
+
+.header_main .hederl1 .phone a {
+  color: #fff;
+}
+
+.header_main .hederl1 .phone a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header_main .hederl1 .head_basket {
+  width: 116px;
+  margin-right: -65px;
+}
+
+.header_main .hederl1 .mnav {
+  position: relative;
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 240px;
+}
+
+.header_main .hederl1 .mnav ul {
+  float: right;
+}
+
+.header_main .hederl1 .mnav ul li {
+  list-style: none;
+  float: left;
+  padding-right: 35px;
+}
+
+.header_main .hederl1 .mnav ul li a {
+  display: block;
+  font-size: 12px;
+  color: #1d323a;
+  font-family: "plumbcbold", sans-serif;
+  text-transform: uppercase;
+  line-height: 42px;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.header_main .hederl1 .mnav ul li a:hover {
+  color: #ee582f;
+}
+
+.header_main .hederl1 .mnav .mnav_i {
+  background: #fff;
+  height: 42px;
+  float: right;
+}
+
+@media only screen and (max-width: 1200px) {
+  .hederl1 {
+    display: none !important;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1240px), (max-height: 700px) {
+  .mnav ul li {
+    padding-right: 36px;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .mnav ul li.hide-on-small {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1152px) {
+  .mnav {
+    padding-right: 0px;
+  }
+}
+
+@media only screen and (max-width: 1240px) {
+  .mnav .mnav_i {
+    float: left;
+    width: 100%;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 384px) {
+  .phone {
+    width: 200px;
+  }
+}
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,7 @@
+langcode: ru
+status: true
+dependencies: {  }
+name: category
+vid: category
+description: null
+weight: 0

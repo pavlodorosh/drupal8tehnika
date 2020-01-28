@@ -1,0 +1,7 @@
+langcode: ru
+status: true
+dependencies: {  }
+name: colors
+vid: colors
+description: null
+weight: 0

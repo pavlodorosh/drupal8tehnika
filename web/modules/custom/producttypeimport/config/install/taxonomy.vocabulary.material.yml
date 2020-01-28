@@ -1,0 +1,7 @@
+langcode: ru
+status: true
+dependencies: {  }
+name: material
+vid: material
+description: null
+weight: 0

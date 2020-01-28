@@ -1,0 +1,18 @@
+langcode: ru
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - tablefield
+id: commerce_product.field_ch
+field_name: field_ch
+entity_type: commerce_product
+type: tablefield
+settings: {  }
+module: tablefield
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

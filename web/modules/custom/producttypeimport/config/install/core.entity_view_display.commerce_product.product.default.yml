@@ -1,0 +1,1059 @@
+langcode: ru
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.product
+    - field.field.commerce_product.product.field__3_
+    - field.field.commerce_product.product.field__no_frost
+    - field.field.commerce_product.product.field_actionmodal
+    - field.field.commerce_product.product.field_aquastop
+    - field.field.commerce_product.product.field_art_p
+    - field.field.commerce_product.product.field_avtopodpd
+    - field.field.commerce_product.product.field_avtopodpk
+    - field.field.commerce_product.product.field_bmoi
+    - field.field.commerce_product.product.field_brends
+    - field.field.commerce_product.product.field_brick
+    - field.field.commerce_product.product.field_calc_group
+    - field.field.commerce_product.product.field_capucinator
+    - field.field.commerce_product.product.field_category
+    - field.field.commerce_product.product.field_ch
+    - field.field.commerce_product.product.field_ch_t
+    - field.field.commerce_product.product.field_character_dmg
+    - field.field.commerce_product.product.field_color
+    - field.field.commerce_product.product.field_comp
+    - field.field.commerce_product.product.field_ddat
+    - field.field.commerce_product.product.field_design
+    - field.field.commerce_product.product.field_do
+    - field.field.commerce_product.product.field_doc
+    - field.field.commerce_product.product.field_dupt
+    - field.field.commerce_product.product.field_elite
+    - field.field.commerce_product.product.field_emir
+    - field.field.commerce_product.product.field_emir_salon
+    - field.field.commerce_product.product.field_exclusive
+    - field.field.commerce_product.product.field_forma
+    - field.field.commerce_product.product.field_fun
+    - field.field.commerce_product.product.field_gar
+    - field.field.commerce_product.product.field_gazk
+    - field.field.commerce_product.product.field_gd
+    - field.field.commerce_product.product.field_gril
+    - field.field.commerce_product.product.field_image
+    - field.field.commerce_product.product.field_kbottles
+    - field.field.commerce_product.product.field_kch
+    - field.field.commerce_product.product.field_kdver
+    - field.field.commerce_product.product.field_kenergy
+    - field.field.commerce_product.product.field_kkomf
+    - field.field.commerce_product.product.field_kkomp
+    - field.field.commerce_product.product.field_kkomppp
+    - field.field.commerce_product.product.field_kkrujki
+    - field.field.commerce_product.product.field_kprog
+    - field.field.commerce_product.product.field_ksveg
+    - field.field.commerce_product.product.field_ky
+    - field.field.commerce_product.product.field_material
+    - field.field.commerce_product.product.field_md
+    - field.field.commerce_product.product.field_mfasad
+    - field.field.commerce_product.product.field_mg
+    - field.field.commerce_product.product.field_mmicr
+    - field.field.commerce_product.product.field_new_link
+    - field.field.commerce_product.product.field_novelty
+    - field.field.commerce_product.product.field_obholod
+    - field.field.commerce_product.product.field_obmoroz
+    - field.field.commerce_product.product.field_okdkg
+    - field.field.commerce_product.product.field_okdvl
+    - field.field.commerce_product.product.field_op
+    - field.field.commerce_product.product.field_os
+    - field.field.commerce_product.product.field_ottenok
+    - field.field.commerce_product.product.field_pnk
+    - field.field.commerce_product.product.field_price
+    - field.field.commerce_product.product.field_priceaction
+    - field.field.commerce_product.product.field_priceold
+    - field.field.commerce_product.product.field_pvl
+    - field.field.commerce_product.product.field_pzagr
+    - field.field.commerce_product.product.field_rdush
+    - field.field.commerce_product.product.field_remain
+    - field.field.commerce_product.product.field_revers
+    - field.field.commerce_product.product.field_rrab
+    - field.field.commerce_product.product.field_rrrrupr
+    - field.field.commerce_product.product.field_rshir
+    - field.field.commerce_product.product.field_rvis
+    - field.field.commerce_product.product.field_salesarr
+    - field.field.commerce_product.product.field_si
+    - field.field.commerce_product.product.field_snishi
+    - field.field.commerce_product.product.field_so
+    - field.field.commerce_product.product.field_sod
+    - field.field.commerce_product.product.field_supperp
+    - field.field.commerce_product.product.field_tempdat
+    - field.field.commerce_product.product.field_timer
+    - field.field.commerce_product.product.field_tippov
+    - field.field.commerce_product.product.field_tk
+    - field.field.commerce_product.product.field_tnapr
+    - field.field.commerce_product.product.field_toc
+    - field.field.commerce_product.product.field_top
+    - field.field.commerce_product.product.field_tosv
+    - field.field.commerce_product.product.field_tresh
+    - field.field.commerce_product.product.field_ts
+    - field.field.commerce_product.product.field_tt
+    - field.field.commerce_product.product.field_tupr
+    - field.field.commerce_product.product.field_type_product
+    - field.field.commerce_product.product.field_type_surf
+    - field.field.commerce_product.product.field_typenom
+    - field.field.commerce_product.product.field_ug
+    - field.field.commerce_product.product.field_upr
+    - field.field.commerce_product.product.field_ursh
+    - field.field.commerce_product.product.field_usi
+    - field.field.commerce_product.product.field_vidm
+    - field.field.commerce_product.product.field_vmat
+    - field.field.commerce_product.product.field_vshlang
+    - field.field.commerce_product.product.field_vvv
+    - field.field.commerce_product.product.field_zagrsush
+    - field.field.commerce_product.product.field_zk
+    - field.field.commerce_product.product.field_zpos
+    - field.field.commerce_product.product.field_zsk
+  module:
+    - commerce_product
+    - svg_image
+    - tablefield
+    - text
+id: commerce_product.product.default
+targetEntityType: commerce_product
+bundle: product
+mode: default
+content:
+  field__3_:
+    weight: 32
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field__no_frost:
+    weight: 68
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_actionmodal:
+    weight: 112
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_aquastop:
+    weight: 59
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_art_p:
+    weight: 88
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_avtopodpd:
+    weight: 75
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_avtopodpk:
+    weight: 76
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_bmoi:
+    weight: 64
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_brends:
+    weight: 17
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_brick:
+    weight: 79
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_calc_group:
+    weight: 114
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_capucinator:
+    weight: 89
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_category:
+    weight: 12
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ch:
+    weight: 22
+    label: above
+    settings:
+      row_header: 1
+      column_header: 0
+    third_party_settings: {  }
+    type: tablefield
+    region: content
+  field_ch_t:
+    weight: 14
+    label: above
+    settings:
+      row_header: 1
+      column_header: 0
+    third_party_settings: {  }
+    type: tablefield
+    region: content
+  field_character_dmg:
+    weight: 82
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_color:
+    weight: 30
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_comp:
+    weight: 51
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_ddat:
+    weight: 39
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_design:
+    weight: 42
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_do:
+    weight: 20
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_doc:
+    weight: 25
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_dupt:
+    weight: 38
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_elite:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_emir:
+    weight: 108
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_emir_salon:
+    weight: 109
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_exclusive:
+    weight: 83
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_forma:
+    weight: 28
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_fun:
+    weight: 23
+    label: above
+    settings:
+      row_header: 1
+      column_header: 0
+    third_party_settings: {  }
+    type: tablefield
+    region: content
+  field_gar:
+    weight: 21
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_gazk:
+    weight: 62
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_gd:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_gril:
+    weight: 56
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_image:
+    weight: 13
+    label: above
+    settings:
+      svg_attributes:
+        width: ''
+        height: ''
+      svg_render_as_image: true
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_kbottles:
+    weight: 72
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_kch:
+    weight: 80
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_kdver:
+    weight: 67
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_kenergy:
+    weight: 70
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_kkomf:
+    weight: 74
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_kkomp:
+    weight: 31
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_kkomppp:
+    weight: 66
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_kkrujki:
+    weight: 65
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_kprog:
+    weight: 46
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_ksveg:
+    weight: 69
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_ky:
+    weight: 105
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_material:
+    weight: 40
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_md:
+    weight: 98
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_mfasad:
+    weight: 15
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_mg:
+    weight: 92
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_mmicr:
+    weight: 52
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_new_link:
+    weight: 116
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_novelty:
+    weight: 86
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_obholod:
+    weight: 50
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_obmoroz:
+    weight: 49
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_okdkg:
+    weight: 91
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_okdvl:
+    weight: 90
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_op:
+    weight: 24
+    label: above
+    settings:
+      row_header: 1
+      column_header: 0
+    third_party_settings: {  }
+    type: tablefield
+    region: content
+  field_os:
+    weight: 19
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ottenok:
+    weight: 41
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_pnk:
+    weight: 99
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_price:
+    weight: 117
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_priceaction:
+    weight: 111
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_priceold:
+    weight: 110
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pvl:
+    weight: 93
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_pzagr:
+    weight: 58
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_rdush:
+    weight: 44
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_remain:
+    weight: 81
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_revers:
+    weight: 100
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_rrab:
+    weight: 33
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_rrrrupr:
+    weight: 61
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_rshir:
+    weight: 53
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_rvis:
+    weight: 54
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_salesarr:
+    weight: 113
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_si:
+    weight: 101
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_snishi:
+    weight: 29
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_so:
+    weight: 94
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sod:
+    weight: 102
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_supperp:
+    weight: 85
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tempdat:
+    weight: 71
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_timer:
+    weight: 16
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tippov:
+    weight: 60
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tk:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tnapr:
+    weight: 55
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_toc:
+    weight: 47
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_top:
+    weight: 84
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tosv:
+    weight: 36
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tresh:
+    weight: 63
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ts:
+    weight: 45
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tt:
+    weight: 97
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tupr:
+    weight: 35
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_type_product:
+    weight: 115
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_type_surf:
+    weight: 18
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_typenom:
+    weight: 77
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ug:
+    weight: 37
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_upr:
+    weight: 87
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_ursh:
+    weight: 34
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_usi:
+    weight: 106
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_vidm:
+    weight: 26
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_vmat:
+    weight: 27
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_vshlang:
+    weight: 43
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_vvv:
+    weight: 48
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_zagrsush:
+    weight: 73
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_decimal
+    region: content
+  field_zk:
+    weight: 95
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_zpos:
+    weight: 57
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_zsk:
+    weight: 96
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 10
+    region: content
+    label: above
+    settings:
+      combine: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  search_api_excerpt: true
+  stores: true
+  uid: true
